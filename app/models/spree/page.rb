@@ -11,7 +11,7 @@ class Spree::Page < ActiveRecord::Base
 
   before_save :update_positions_and_slug
 
-  attr_accessible :title, :slug, :body, :meta_title, :meta_keywords, :meta_description, :layout, :foreign_link, :position, :show_in_sidebar, :show_in_header, :show_in_footer, :visible
+  attr_accessible :title, :slug, :body, :meta_title, :meta_keywords, :meta_description, :layout, :foreign_link, :position, :show_in_sidebar, :show_in_header, :show_in_footer, :visible, :authentication_required
 
   def initialize(*args)
     super(*args)

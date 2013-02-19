@@ -14,6 +14,7 @@
 		<th><%= Spree::Page.human_attribute_name(:title) %></th>
 		<th><%= t("static_content.link") %></th>
 		<th><%= Spree::Page.human_attribute_name(:visible) %></th>
+        <th><%= Spree::Page.human_attribute_name(:authentication_required) %></th>
 		<th><%= t("action") %></th>
   </tr>
 	<tbody>
@@ -28,6 +29,7 @@
 			<td>
 			  <%= icon('tick') if page.visible %>
 			</td>
+            <td><%= icon('tick') if page.authentication_required %></td>
 			<td>
         <%= link_to_edit page %> &nbsp;
         <%= link_to_delete page %>
